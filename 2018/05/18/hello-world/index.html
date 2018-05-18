@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="php时间周字段特殊处理"/>
+        <meta property="og:title" content="Hello World"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>php时间周字段特殊处理 - hangjw</title>
+    <title>Hello World - hangjw</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -100,14 +100,14 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">php时间周字段特殊处理</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-03-14</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Hello World</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-05-18</p>
         </div>
     </div>
 
     <!-- Icon -->
     <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <i class="header-icon fa fa-address-book-o"></i>
+        <i class="header-icon fa fa-file-text-o"></i>
     </div>
 </div>
 
@@ -119,39 +119,20 @@
                 <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
                     <!-- Tags Vertical -->
                     
-                        <div class="tags-container-vertical">
-                            <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/php/">#php</a>
-                            </div>
-                        </div>
-                    
 
                     <!-- Main Post Content -->
-                    <h1 id="php快捷文档生成方式"><a href="#php快捷文档生成方式" class="headerlink" title="php快捷文档生成方式"></a>php快捷文档生成方式</h1><h3 id="步骤一、-php通过周获取具体时间区间"><a href="#步骤一、-php通过周获取具体时间区间" class="headerlink" title="步骤一、 [php通过周获取具体时间区间]"></a>步骤一、 [php通过周获取具体时间区间]</h3><pre><code>function getWeekDate($year,$weeknum){
-    $firstdayofyear=mktime(0,0,0,1,1,$year);
-    $firstweekday=date(&apos;N&apos;,$firstdayofyear);
-    $firstweenum=date(&apos;W&apos;,$firstdayofyear);
-    if($firstweenum==1){
-        $day=(1-($firstweekday-1))+7*($weeknum-1);
-        $startdate=date(&apos;Y-m-d&apos;,mktime(0,0,0,1,$day,$year));
-        $enddate=date(&apos;Y-m-d&apos;,mktime(0,0,0,1,$day+6,$year));
-    }else{
-        $day=(9-$firstweekday)+7*($weeknum-1);
-        $startdate=date(&apos;Y-m-d&apos;,mktime(0,0,0,1,$day,$year));
-        $enddate=date(&apos;Y-m-d&apos;,mktime(0,0,0,1,$day+6,$year));
-    }
+                    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
-    return array($startdate,$enddate);
-}
-</code></pre><h3 id="步骤二、-数据库分组字段"><a href="#步骤二、-数据库分组字段" class="headerlink" title="步骤二、 [数据库分组字段]"></a>步骤二、 [数据库分组字段]</h3><pre><code>select date_format(now(), &apos;%X%v&apos;);
-</code></pre><h3 id="步骤三、-php时间转周"><a href="#步骤三、-php时间转周" class="headerlink" title="步骤三、 [php时间转周]"></a>步骤三、 [php时间转周]</h3><pre><code>echo date(&apos;oW&apos;);
-</code></pre>
                     
                     <!-- Tags Bottom -->
-                    
-                        <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/php/">#php</a>
-                        </div>
                     
 
                     <!-- Comments -->
