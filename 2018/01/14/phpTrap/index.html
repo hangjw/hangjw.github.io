@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="windows和虚拟机共享目录"/>
+        <meta property="og:title" content="php陷阱（持续更新）"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>windows和虚拟机共享目录 - hangjw</title>
+    <title>php陷阱（持续更新） - hangjw</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -100,14 +100,14 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">windows和虚拟机共享目录</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-03-12</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">php陷阱（持续更新）</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-01-14</p>
         </div>
     </div>
 
     <!-- Icon -->
     <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <i class="header-icon fa fa-file-text-o"></i>
+        <i class="header-icon fa fa-address-book-o"></i>
     </div>
 </div>
 
@@ -121,30 +121,29 @@
                     
                         <div class="tags-container-vertical">
                             <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/centos/">#centos</a>
+                                <a class="fw3 ph1 dib" href="/tags/php/">#php</a>
                             </div>
                         </div>
                     
 
                     <!-- Main Post Content -->
-                    <p>说明：<br>windows下有一共享文件夹APP，windows本地ip是192.168.9.155<br>现在需要在linux服务器上挂载这个APP文件夹，linux服务器ip是192.168.9.200<br>操作记录如下：</p>
-<h3 id="1）windows上的准备工作"><a href="#1）windows上的准备工作" class="headerlink" title="1）windows上的准备工作"></a>1）windows上的准备工作</h3><pre><code>首先将windows上D盘下的APP文件夹设置为共享。右击APP文件夹的“共享”属性.
-</code></pre><img src="/2017/03/12/share/1.jpg" title="This is an example image">
-<img src="/2017/03/12/share/2.jpg" title="This is an example image">
-<img src="/2017/03/12/share/3.jpg" title="This is an example image">
-<img src="/2017/03/12/share/4.jpg" title="This is an example image">
-<h3 id="2）linux服务器上的操作"><a href="#2）linux服务器上的操作" class="headerlink" title="2）linux服务器上的操作"></a>2）linux服务器上的操作</h3><pre><code>创建挂载目录/mnt/APP
-mount -t cifs -o username=WindowsLogin,password=&quot;passwordinWindows&quot; //16.187.190.50/test /mnt/
-</code></pre><h3 id="3）检查"><a href="#3）检查" class="headerlink" title="3）检查"></a>3）检查</h3><pre><code>df -h
-</code></pre><p>##卸载</p>
-<h3 id="1）-卸载"><a href="#1）-卸载" class="headerlink" title="1） 卸载"></a>1） 卸载</h3><pre><code>umount /mnt/APP
-</code></pre><h3 id="2）-检查"><a href="#2）-检查" class="headerlink" title="2） 检查"></a>2） 检查</h3><pre><code>umount /mnt/APP
-</code></pre>
+                    <h1 id="php快捷文档生成方式"><a href="#php快捷文档生成方式" class="headerlink" title="php快捷文档生成方式"></a>php快捷文档生成方式</h1><h3 id="一、orm中模型关联属性不可直接isset"><a href="#一、orm中模型关联属性不可直接isset" class="headerlink" title="一、orm中模型关联属性不可直接isset()"></a>一、orm中模型关联属性不可直接isset()</h3><pre><code>$user = User::with(&apos;coin&apos;)-&gt;get();
+if (isset($user-&gt;coin)) {
+    //错误
+}
+
+$coin = $user-&gt;coin;
+if (isset($name)) {
+    //正确
+}
+return $coin-&gt;num;
+</code></pre><p>isset不可直接作用于方法，导致错误结果。模型获取属性主要方式是通过魔术方法。</p>
+
                     
                     <!-- Tags Bottom -->
                     
                         <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/centos/">#centos</a>
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/php/">#php</a>
                         </div>
                     
 

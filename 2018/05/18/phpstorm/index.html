@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="windows和虚拟机共享目录"/>
+        <meta property="og:title" content="hangjw"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>windows和虚拟机共享目录 - hangjw</title>
+    <title>hangjw</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -100,8 +100,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">windows和虚拟机共享目录</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2017-03-12</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Untitled</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-05-18</p>
         </div>
     </div>
 
@@ -119,33 +119,20 @@
                 <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
                     <!-- Tags Vertical -->
                     
-                        <div class="tags-container-vertical">
-                            <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/centos/">#centos</a>
-                            </div>
-                        </div>
-                    
 
                     <!-- Main Post Content -->
-                    <p>说明：<br>windows下有一共享文件夹APP，windows本地ip是192.168.9.155<br>现在需要在linux服务器上挂载这个APP文件夹，linux服务器ip是192.168.9.200<br>操作记录如下：</p>
-<h3 id="1）windows上的准备工作"><a href="#1）windows上的准备工作" class="headerlink" title="1）windows上的准备工作"></a>1）windows上的准备工作</h3><pre><code>首先将windows上D盘下的APP文件夹设置为共享。右击APP文件夹的“共享”属性.
-</code></pre><img src="/2017/03/12/share/1.jpg" title="This is an example image">
-<img src="/2017/03/12/share/2.jpg" title="This is an example image">
-<img src="/2017/03/12/share/3.jpg" title="This is an example image">
-<img src="/2017/03/12/share/4.jpg" title="This is an example image">
-<h3 id="2）linux服务器上的操作"><a href="#2）linux服务器上的操作" class="headerlink" title="2）linux服务器上的操作"></a>2）linux服务器上的操作</h3><pre><code>创建挂载目录/mnt/APP
-mount -t cifs -o username=WindowsLogin,password=&quot;passwordinWindows&quot; //16.187.190.50/test /mnt/
-</code></pre><h3 id="3）检查"><a href="#3）检查" class="headerlink" title="3）检查"></a>3）检查</h3><pre><code>df -h
-</code></pre><p>##卸载</p>
-<h3 id="1）-卸载"><a href="#1）-卸载" class="headerlink" title="1） 卸载"></a>1） 卸载</h3><pre><code>umount /mnt/APP
-</code></pre><h3 id="2）-检查"><a href="#2）-检查" class="headerlink" title="2） 检查"></a>2） 检查</h3><pre><code>umount /mnt/APP
-</code></pre>
+                    <p>—u<br>title: phpstorm激活<br>date: 2018-1-14 13:11:33<br>icon: fa-address-book-o<br>tags: ide</p>
+<hr>
+<h1 id="phpstorm激活"><a href="#phpstorm激活" class="headerlink" title="phpstorm激活"></a>phpstorm激活</h1><h3 id="1）下载"><a href="#1）下载" class="headerlink" title="1）下载"></a>1）下载</h3><p>链接 <a href="https://pan.baidu.com/s/1hUpizpOIcIYqk52wuCsQIQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1hUpizpOIcIYqk52wuCsQIQ</a></p>
+<p>放到phpstorm安装目录下的lib文件夹</p>
+<p>如放到f盘</p>
+<p>F:\PhpStorm 2018.1.1\lib\JetbrainsCrack.jar</p>
+<h3 id="2）找到phpstorm-的安装路径"><a href="#2）找到phpstorm-的安装路径" class="headerlink" title="2）找到phpstorm 的安装路径"></a>2）找到phpstorm 的安装路径</h3><p>在\bin目录下有两个文件 PhpStorm.exe.vmoptions PhpStorm64.exe.vmoptions</p>
+<p>打开文件 ，最后面加入 一行-javaagent:F:\PhpStorm 2018.1.1\lib\JetbrainsCrack.jar</p>
+<p>注 ： 后面是补丁的路径,根据自己放的位置修改</p>
+<h3 id="3）保存文件关闭并重新打开phpstorm"><a href="#3）保存文件关闭并重新打开phpstorm" class="headerlink" title="3）保存文件关闭并重新打开phpstorm"></a>3）保存文件关闭并重新打开phpstorm</h3>
                     
                     <!-- Tags Bottom -->
-                    
-                        <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/centos/">#centos</a>
-                        </div>
                     
 
                     <!-- Comments -->
