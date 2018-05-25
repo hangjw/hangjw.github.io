@@ -138,6 +138,15 @@ if (isset($name)) {
 }
 return $coin-&gt;num;
 </code></pre><p>isset不可直接作用于方法，导致错误结果。模型获取属性主要方式是通过魔术方法。</p>
+<h3 id="二、mysql翻页数据不统一问题"><a href="#二、mysql翻页数据不统一问题" class="headerlink" title="二、mysql翻页数据不统一问题"></a>二、mysql翻页数据不统一问题</h3><pre><code>select * from user;
+count:30;
+
+select * from user limit 0,10;
+select * from user limit 10,10;
+select * from user limit 20,10;
+
+return $coin-&gt;num;
+</code></pre><p>因为没有明确指定顺序，所以下面3条sql在返回数据的同时，有一点可能会有重复数据，导致部分数据始终不能再翻页中得到体现。</p>
 
                     
                     <!-- Tags Bottom -->
