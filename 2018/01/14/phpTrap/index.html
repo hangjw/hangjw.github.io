@@ -146,7 +146,14 @@ select * from user limit 10,10;
 select * from user limit 20,10;
 </code></pre><p>因为没有明确指定顺序，所以下面3条sql在返回数据的同时，有一点可能会有重复数据，导致部分数据始终不能再翻页中得到体现。</p>
 <p>解决方法：<br>在需要分页的列表页面，带上<code>order by id desc</code>;</p>
+<h3 id="三、值判断的坑"><a href="#三、值判断的坑" class="headerlink" title="三、值判断的坑"></a>三、值判断的坑</h3><pre><code>$code = &apos;001asd&apos;;
+var_dump($code == 1); // true
 
+$code = &apos;011asd&apos;;
+var_dump($code == 1); // false
+</code></pre><p>由于内部构值得问题，导致字符串影响了字符串与整形之前的值判断，建议修改为。</p>
+<pre><code>var_dump($code == ‘&apos;1&apos;); // false   
+</code></pre>
                     
                     <!-- Tags Bottom -->
                     
